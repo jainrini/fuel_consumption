@@ -1,5 +1,7 @@
 # fuel_consumption
-Build maven project and run Demo.classOnce the server starts successfully , say on port 8080 you can use below api's and test using PostMan or any other client.If the server port 8080 is busy , we can configure that in application.properties
+Build maven project and run Demo.class.
+Once the server starts successfully ,say on port 8080 you can use below api's and test using PostMan or any other client.
+If the server port 8080 is busy , we can configure that in application.properties
 
 1. To add records for a driver or list of drivers     
 POST request: http://localhost:8080/fuel/consumption/add 
@@ -16,8 +18,11 @@ Payload: [{"driverid": 1,
         "volume": 30,
         "date": "2019-09-11"
             }]
-Note : Validations on add and update:1. DriverId,FuelType,Price,Volume and Date cannot be null2.Date format should be : yyyy-MM-dd3. The fuel type and its price are defined in separate table 'FuelType'.
-Assumption: FuelTypes should be  fixed and user should only be allowed to choose available type only .The price of every fuel per lit should be fixed and allowed.
+Note : Validations on add and update:
+1. DriverId,FuelType,Price,Volume and Date cannot be null
+2.Date format should be : yyyy-MM-dd3.
+The fuel type and its price are defined in separate table 'FuelType'.
+Assumption: FuelTypes should be  fixed and user should only be allowed to choose available type only .The price of every fuel per lit should be fixed and should be auto populated in user interface.
 Any changes required can be done using below API's that allows to add and update FuelType.
 a. Get all existing FuelTypes and corresponding prices:    
 GET Request: http://localhost:8080/fuel/type
@@ -51,5 +56,6 @@ b. For all drivers :POST request: http://localhost:8080/fuel/get/amount
 
 3. Update Records:
 PUT request : http://localhost:8080/fuel/update/details
+
 4.Delete records for a driver:
 DELETE request : http://localhost:8080/fuel/delete/{id}
