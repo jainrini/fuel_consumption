@@ -1,6 +1,7 @@
 package test;
 
 import com.app.customexception.FuelTypeNotFound;
+import com.app.customexception.InValidPrice;
 import com.app.customexception.RecordNotFound;
 import com.app.model.FuelConsumed;
 import com.app.model.FuelConsumption;
@@ -83,7 +84,7 @@ public class FuelConsumptionTest {
           Mockito.when(fuelRepository.findAll()).thenReturn(fuelConsumptionList);
     }
     @Test
-    public void addAll() throws FuelTypeNotFound {
+    public void addAll() throws FuelTypeNotFound, InValidPrice {
         FuelConsumption f1 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.SEPTEMBER, 10)).fueltype("A").price(10.02).volume(10.00).build();
         FuelConsumption f2 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.SEPTEMBER, 12)).fueltype("A").price(10.02).volume(20.00).build();
         FuelConsumption f3 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.AUGUST, 11)).fueltype("B").price(20.02).volume(30.00).build();
@@ -104,7 +105,7 @@ public class FuelConsumptionTest {
     public ExpectedException exceptionRule = ExpectedException.none();
 
     @Test(expected = FuelTypeNotFound.class)
-    public void addInvalidType() throws FuelTypeNotFound {
+    public void addInvalidType() throws FuelTypeNotFound, InValidPrice {
         FuelConsumption f1 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.SEPTEMBER, 10)).fueltype("D").price(10.02).volume(10.00).build();
         List<FuelConsumption> updatedConsumption = service.addAll(Arrays.asList(f1));
         exceptionRule.expect(FuelTypeNotFound.class);
@@ -151,7 +152,7 @@ public class FuelConsumptionTest {
     }
 
     @Test
-    public void updateDetails() {
+    public void updateDetails() throws FuelTypeNotFound, InValidPrice {
         FuelConsumption f1 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.SEPTEMBER, 10)).fueltype("A").price(10.02).volume(10.00).build();
         FuelConsumption f2 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.SEPTEMBER, 12)).fueltype("A").price(10.02).volume(20.00).build();
         FuelConsumption f3 = FuelConsumption.builder().driverid(123).date(LocalDate.of(2019, Month.AUGUST, 11)).fueltype("B").price(20.02).volume(30.00).build();

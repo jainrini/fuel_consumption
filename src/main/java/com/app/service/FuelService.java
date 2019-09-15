@@ -1,6 +1,7 @@
 package com.app.service;
 
 import com.app.customexception.FuelTypeNotFound;
+import com.app.customexception.InValidPrice;
 import com.app.customexception.RecordNotFound;
 import com.app.model.FuelType;
 import com.app.repository.FuelTypeRepository;
@@ -10,10 +11,14 @@ import com.app.model.FuelConsumed;
 import com.app.model.FuelConsumption;
 import com.app.model.FuelStatics;
 import com.app.repository.FuelConsumptionRepository;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.Month;
@@ -31,16 +36,28 @@ public class FuelService {
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
 
+    DecimalFormat df = new DecimalFormat("0.00");
     public List<FuelConsumption> getAll() {
         List<FuelConsumption> all = fuelRepository.findAll();
+        all.stream().forEach(a->a.setMoneySpent(Double.valueOf(df.format(a.getPrice()*a.getVolume()))));
         return all;
 
     }
 
-    public List<FuelConsumption> addAll(List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound {
-        List<FuelType> allTypes = fuelTypeRepository.findAll();
-        Map<String, FuelType> fuelTypeMap = allTypes.stream().collect(Collectors.toMap(FuelType::getTypename, Function.identity()));
+    public List<FuelConsumption> addAll(List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound, InValidPrice {
+
+        isValidType(fuelConsumption);
+        List<FuelConsumption> updatedConsumption = fuelRepository.saveAll(fuelConsumption);
+        updatedConsumption.stream().forEach(a->a.setMoneySpent(Double.valueOf(df.format(a.getPrice()*a.getVolume()))));
+        return updatedConsumption;
+    }
+
+    private void isValidType(List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound, InValidPrice {
         List<String> fuelTypes=new ArrayList<>();
+        List<FuelType> allTypes = fuelTypeRepository.findAll();
+
+        Map<String, Double> fuelTypeMap = allTypes.stream().collect(Collectors.toMap(FuelType::getTypename, FuelType::getPrice));
+
         Set<String> fuelType = fuelConsumption.stream().map(f -> f.getFueltype()).collect(Collectors.toSet());
         for(String ft:fuelType){
             if(!fuelTypeMap.containsKey(ft)){
@@ -49,23 +66,28 @@ public class FuelService {
         }
         if(!fuelTypes.isEmpty()){
             throw new FuelTypeNotFound("Fuel Types not found "+ String.join(",",fuelTypes)
-                    + "Please add corresponding valid types " +fuelTypeMap.keySet());
+                    + "  Please add corresponding valid types " +fuelTypeMap.keySet());
         }
-        /* List<FuelConsumption> updatedConsumption= new ArrayList<>();
-         for(FuelConsumption f:fuelConsumption){
-            FuelConsumption updatedData = fuelRepository.save(f);
-            updatedConsumption.add(updatedData);
-        }*/
-        List<FuelConsumption> updatedConsumption = fuelRepository.saveAll(fuelConsumption);
-
-        return updatedConsumption;
+        Map<String,Double> fuelConsumptionMap= new HashMap<>();
+        for(FuelConsumption f:fuelConsumption){
+            fuelConsumptionMap.put(f.getFueltype(),f.getPrice());
+        }
+        for(String s:fuelConsumptionMap.keySet()){
+            if(!(fuelConsumptionMap.get(s).compareTo(fuelTypeMap.get(s))==0)){
+                throw new InValidPrice("The valid price of fuel type " + s + "is :"+ fuelTypeMap.get(s));
+            }
+        }
     }
 
     public HashMap<String, FuelConsumed> getDetailsForDriver(Integer id) throws RecordNotFound {
-        List<FuelConsumption> fuelConsumptions = fuelRepository.findAllById(Arrays.asList(id));
 
-        if(!fuelConsumptions.isEmpty()) {
-            HashMap<String, FuelConsumed> monthFuelConsumedHashMap = getMonthFuelConsumedHashMap(fuelConsumptions);
+        List<FuelConsumption> fuelConsumptions = fuelRepository.findAllById(Arrays.asList(id));
+        List<FuelConsumption> all = fuelRepository.findAll();
+        Multimap<Integer,FuelConsumption> map= ArrayListMultimap.create();
+        all.stream().forEach(a->map.put(a.getDriverid(),a));
+        Collection<FuelConsumption> fuelConsumptions1 = map.get(id);
+        if(map.containsKey(id)){
+            HashMap<String, FuelConsumed> monthFuelConsumedHashMap = getMonthFuelConsumedHashMap((List<FuelConsumption>) fuelConsumptions1);
             return monthFuelConsumedHashMap;
         }
         else{
@@ -77,7 +99,6 @@ public class FuelService {
         HashMap<String,FuelConsumed> fuelConsumedHashMap = new HashMap<String,FuelConsumed>();
         DecimalFormat df = new DecimalFormat("0.00");
         for (FuelConsumption f : fuelConsumptions) {
-
             LocalDate localDate = f.getDate();
             Month month1 = localDate.getMonth();
             f.setDriverid(f.getDriverid());
@@ -136,7 +157,8 @@ public class FuelService {
     }
 
 
-    public List<FuelConsumption> updateDetails(List<FuelConsumption> fuelConsumption) {
+    public List<FuelConsumption> updateDetails(List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound, InValidPrice {
+        isValidType(fuelConsumption);
         List<FuelConsumption> existingFuel = fuelRepository.findAll();
         List<FuelConsumption> deleteList= new ArrayList<>();
         for(FuelConsumption f:existingFuel){
@@ -155,9 +177,22 @@ public class FuelService {
         return newUpdateRecords;
     }
 
-    public boolean deleteById(Integer id) {
-        fuelRepository.deleteById(id);
-        return true;
+    public boolean deleteById(Integer id) throws RecordNotFound {
+        final List<FuelConsumption> all = fuelRepository.findAll();
+        List<FuelConsumption> consumption= all.stream().filter(a -> a.getDriverid().compareTo(id) == 0).collect(Collectors.toList());
+        if(!consumption.isEmpty()) {
+            List<FuelConsumption> deleted = new ArrayList<>();
+            for (FuelConsumption f : consumption) {
+                fuelRepository.deleteById(f.getFid());
+                deleted.add(f);
+            }
+            if (deleted.size() == consumption.size())
+                return true;
+            else {
+                return false;
+            }
+        }
+        throw  new RecordNotFound("Id does not exist");
     }
 
     public Map<String, FuelType> getFuelTypeDetails() {

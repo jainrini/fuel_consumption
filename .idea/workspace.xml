@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="" />
+    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/customexception/InValidPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption$FuelConsumptionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption$FuelConsumptionBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +38,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -28,16 +49,19 @@
     </option>
   </component>
   <component name="ProjectId" id="1Qh7KpGujFaPubrfPP83Z6gnJoU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/app" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.app.service" />
       <recent name="com.app" />
+      <recent name="com.app.service" />
       <recent name="com.app.model" />
       <recent name="com.app.repository" />
       <recent name="com.app.controller" />
@@ -62,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FuelConsumptionTest.getDetails">
+  <component name="RunManager" selected="Application.Demo (2)">
     <configuration name="Demo (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.Demo" />
       <module name="FuelConsumption" />
@@ -228,38 +252,79 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>141</line>
+          <line>163</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>148</line>
+          <line>170</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>154</line>
+          <line>176</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>149</line>
+          <line>171</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>143</line>
+          <line>165</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/customvalidator/ValidPriceValidator.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/customvalidator/ValidPriceValidator.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
