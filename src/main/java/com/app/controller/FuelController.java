@@ -46,7 +46,7 @@ public class FuelController {
         return fuelService.updateDetails(fuelConsumption);
     }
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.DELETE)
-    public String updateDetails(@PathVariable Integer id) throws RecordNotFound {
+    public String deleteById(@PathVariable Integer id) throws RecordNotFound {
         if(fuelService.deleteById(id)){
             return "Successfully deleted";
         }
@@ -63,5 +63,8 @@ public class FuelController {
     public List<FuelType> addFuelType(@RequestBody List<FuelType> fuelTypeList){
         return fuelService.addFuelType(fuelTypeList);
     }
-
+    @RequestMapping(value = "/type/update",method = RequestMethod.PUT)
+    public List<FuelType> updateFuelType(@RequestBody List<FuelType> fuelTypeList){
+        return fuelService.updateFuelType(fuelTypeList);
+    }
 }

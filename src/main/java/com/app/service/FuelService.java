@@ -205,4 +205,24 @@ public class FuelService {
         List<FuelType> updatedFuelType = fuelTypeRepository.saveAll(fuelTypeList);
         return updatedFuelType;
     }
+
+    public List<FuelType> updateFuelType(List<FuelType> fuelTypeList) {
+
+        List<FuelType> existingFuel = fuelTypeRepository.findAll();
+        List<FuelType> deleteList= new ArrayList<>();
+        for(FuelType f:existingFuel){
+            List<FuelType> nonDeletable = fuelTypeList.stream().filter(f1->f1.getTypeid()!=null).filter(fuel -> fuel.getTypeid().equals(f.getTypeid())).collect(Collectors.toList());
+            if(nonDeletable.isEmpty()){
+                deleteList.add(f);
+                fuelTypeRepository.delete(f);
+            }
+        }
+        fuelTypeList.remove(deleteList);
+        List<FuelType> newUpdateRecords= new ArrayList<>();
+        for(FuelType fnew:fuelTypeList){
+            FuelType updateNewRecords = fuelTypeRepository.save(fnew);
+            newUpdateRecords.add(fnew);
+        }
+        return newUpdateRecords;
+    }
 }

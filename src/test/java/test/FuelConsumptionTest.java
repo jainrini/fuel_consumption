@@ -79,6 +79,8 @@ public class FuelConsumptionTest {
         FuelConsumption f10 = FuelConsumption.builder().driverid(126).date(LocalDate.of(2019, Month.NOVEMBER, 10)).fueltype("B").price(20.02).volume(10.99).build();
         List<FuelConsumption> fuelConsumptionList = Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10);
         Mockito.when(fuelRepository.save(Mockito.any(FuelConsumption.class))).thenReturn(f1);
+        Mockito.when(fuelRepository.saveAll(Mockito.anyIterable())).thenReturn(fuelConsumptionList);
+        Mockito.when(fuelTypeRepository.saveAll(Mockito.anyIterable())).thenReturn(fuelTypes);
         List<FuelConsumption> fuelConsumptionList2 = Arrays.asList(f1, f2, f3, f4,f5,f6);
           Mockito.when(fuelRepository.findAllById(Arrays.asList(123))).thenReturn(fuelConsumptionList2);
           Mockito.when(fuelRepository.findAll()).thenReturn(fuelConsumptionList);
@@ -96,7 +98,6 @@ public class FuelConsumptionTest {
         FuelConsumption f9 = FuelConsumption.builder().driverid(126).date(LocalDate.of(2019, Month.OCTOBER, 10)).fueltype("C").price(10.01).volume(10.99).build();
         FuelConsumption f10 = FuelConsumption.builder().driverid(126).date(LocalDate.of(2019, Month.NOVEMBER, 10)).fueltype("B").price(20.02).volume(10.99).build();
         List<FuelConsumption> fuelConsumptionList = Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10);
-        Mockito.when(fuelRepository.save(Mockito.any(FuelConsumption.class))).thenReturn(f1);
         List<FuelConsumption> updatedConsumption = service.addAll(fuelConsumptionList);
         Assert.assertNotNull(updatedConsumption);
         Assert.assertEquals(updatedConsumption.size(),10);
@@ -129,12 +130,12 @@ public class FuelConsumptionTest {
         Assert.assertEquals(fuelStatics.getAvgPrice(),Double.valueOf(10.02));
         Assert.assertEquals(fuelStatics.getTotalPrice(),Double.valueOf(20.04));
         FuelConsumed fuelConsumedInAugust = detailsForDriver.get("AUGUST");
-        Assert.assertEquals(fuelConsumedInAugust.getTotalAmountSpent(),Double.valueOf(1150.65));
-        Assert.assertEquals(fuelConsumedInAugust.getFuelConsumptionList().size(),4);
-        Assert.assertEquals(fuelConsumedInAugust.getStatics().size(),2);
+        Assert.assertEquals(fuelConsumedInAugust.getTotalAmountSpent(),Double.valueOf(820.62));
+        Assert.assertEquals(fuelConsumedInAugust.getFuelConsumptionList().size(),2);
+        Assert.assertEquals(fuelConsumedInAugust.getStatics().size(),1);
         FuelStatics fuelStatics2 = fuelConsumedInAugust.getStatics().get(0);
         Assert.assertEquals(fuelStatics2.getAvgPrice(),Double.valueOf(20.02));
-        Assert.assertEquals(fuelStatics2.getTotalPrice(),Double.valueOf(60.06));
+        Assert.assertEquals(fuelStatics2.getTotalPrice(),Double.valueOf(40.04));
     }
     @Test
     public void getDetails() {
@@ -160,6 +161,47 @@ public class FuelConsumptionTest {
         List<FuelConsumption> updateDetails = service.updateDetails(consumptions);
         Assert.assertEquals(updateDetails.size(),3);
 
+    }
+
+    @Test
+   public void getFuelTypeDetails(){
+        Map<String, FuelType> fuelTypeDetails = service.getFuelTypeDetails();
+        Assert.assertEquals(fuelTypeDetails.keySet().size(),3);
+    }
+
+    @Test
+    public void addFuelType(){
+
+        FuelType t1= FuelType.builder().typeid(1).typename("A").price(10.02).build();
+        FuelType t2= FuelType.builder().typeid(2).typename("B").price(20.02).build();
+        FuelType t3= FuelType.builder().typeid(3).typename("C").price(10.01).build();
+        List<FuelType> fuelTypes = Arrays.asList(t1, t2, t3);
+
+        List<FuelType> fuelTypes1 = service.addFuelType(fuelTypes);
+        Assert.assertEquals(fuelTypes1.size(),3);
+
+    }
+
+    @Test
+    public void updateFuelType(){
+        FuelType t1= FuelType.builder().typeid(1).typename("A").price(10.02).build();
+        FuelType t2= FuelType.builder().typeid(2).typename("B").price(20.02).build();
+        List<FuelType> fuelTypes = Arrays.asList(t1, t2);
+        List<FuelType> fuelTypes1 = service.updateFuelType(fuelTypes);
+        Assert.assertEquals(fuelTypes1.size(),2);
+
+    }
+
+    @Test(expected = RecordNotFound.class)
+    public void testRecordNotFound() throws RecordNotFound {
+        boolean b = service.deleteById(1);
+        Assert.assertFalse(b);
+
+    }
+    @Test
+    public void deleteById() throws RecordNotFound {
+        boolean b = service.deleteById(123);
+        Assert.assertTrue(b);
     }
 
 

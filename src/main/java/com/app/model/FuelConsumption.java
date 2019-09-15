@@ -33,7 +33,7 @@ public class FuelConsumption {
     @Column(name="fueltype")
     @NotNull
     @NotBlank
-    @Length(min=1)
+    @Length(min=1,max=1)
     private String fueltype;
 
     @Column(name = "price")
