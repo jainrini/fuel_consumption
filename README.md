@@ -12,7 +12,7 @@ The application allows to register for fuel and retrieve information about all t
 **Import and build the maven project in intellij/eclipse**
 ```
 1.mvn clean install -x
-2. mvn spring-boot:run
+2.mvn spring-boot:run
  ```  
 Wait for the server to be started
 Once the server is up , you can test the API's using client like POSTMAN.
@@ -55,13 +55,13 @@ Below are the error messages if there invalid price and type of fuel.
 **2. FuelConsumption data retrieval :**
 1.get details for all--
 
-2.total spent amount of money grouped by month--
+2.total spent amount of money grouped by month
 
-3.list fuel consumption records for specified month (each row should contain: fuel type, volume, date, price, total price, driver ID)--
+3.list fuel consumption records for specified month (each row should contain: fuel type, volume, date, price, total price, driver ID)
 
-4.statistics for each month, list fuel consumption records grouped by fuel type (each row should contain: fuel type, volume, average price, total price)--
+4.statistics for each month, list fuel consumption records grouped by fuel type (each row should contain: fuel type, volume, average price, total price)
 
-5.The API will throw record not found exception if id doesn’t exist.--
+5.The API will throw record not found exception if id doesn’t exist.
 
  a.For all details :```GET request http://localhost:8080/fuel/consumption/all ```
  b.For a driver : ```GET request: http://localhost:8080/fuel/get/amount/{id} ```
