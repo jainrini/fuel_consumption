@@ -119,6 +119,8 @@ Sample Response:
 
 ## Unit Test cases 
 1. The unit test coverage is 100 % for all the the methods in FuelService.class  which includes below:
+```
    a.Get,Add and update details for a driver and all drivers
    b.Testing invalid inputs and exception
    c.Get,Add and update fuel type
+```
