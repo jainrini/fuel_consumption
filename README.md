@@ -43,7 +43,6 @@ Any changes required can be done using below API's which allows to add and updat
 and its prices.
 
 1. Get all existing FuelTypes and corresponding prices:
-
 ```GET Request: http://localhost:8080/fuel/type```
 
 2. Update existing fuelType :
