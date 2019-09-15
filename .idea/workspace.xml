@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

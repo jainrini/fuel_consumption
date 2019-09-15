@@ -28,7 +28,7 @@ public class FuelController {
         return all;
     }
     @RequestMapping(value = "/consumption/add",method = RequestMethod.POST)
-    public List<FuelConsumption> add(@RequestBody  @Validated List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound, InValidPrice {
+    public List<FuelConsumption> add(@RequestBody List<FuelConsumption> fuelConsumption) throws FuelTypeNotFound, InValidPrice {
         List<FuelConsumption> consumptions = fuelService.addAll(fuelConsumption);
         return consumptions;
     }

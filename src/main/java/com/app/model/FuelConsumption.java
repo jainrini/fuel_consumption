@@ -1,7 +1,5 @@
 package com.app.model;
 
-
-import com.app.customvalidator.ValidPrice;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
@@ -38,7 +36,6 @@ public class FuelConsumption {
 
     @Column(name = "price")
     @NotNull
-    @ValidPrice
     private Double price;
 
     @Column(name = "volume")
