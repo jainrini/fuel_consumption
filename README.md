@@ -34,17 +34,24 @@ By default server starts at port 8080 ,but if it is busy then server configurati
 1. DriverId,FuelType,Price,Volume and Date cannot be null
 2. Date format should be : yyyy-MM-dd.
 The fuel type and its price are defined in separate table 'FuelType'.
-**Assumption:** FuelTypes should be fixed and user should only be allowed to choose available
+
+**Assumption:** 
+FuelTypes should be fixed and user should only be allowed to choose available
 type .The price of every fuel per lit should be fixed and should be auto populated on user
 interface.
 Any changes required can be done using below API's which allows to add and update FuelType
 and its prices.
+
 1. Get all existing FuelTypes and corresponding prices:
+
 ```GET Request: http://localhost:8080/fuel/type```
+
 2. Update existing fuelType :
 ```PUT Request : http://localhost:8080/fuel/type/update```
+
 3. Add fuelType :
 ```POST Request: http://localhost:8080/fuel/type/add```
+
 
 Below are the error messages if there invalid price and type of fuel.
 ```
@@ -64,7 +71,9 @@ Below are the error messages if there invalid price and type of fuel.
 5.The API will throw record not found exception if id doesn’t exist.
 
  a.For all details :```GET request http://localhost:8080/fuel/consumption/all ```
+ 
  b.For a driver : ```GET request: http://localhost:8080/fuel/get/amount/{id} ```
+ 
  c.For all drivers :```GET request: http://localhost:8080/fuel/get/amount```
  
 ```
