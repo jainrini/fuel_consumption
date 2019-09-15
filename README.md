@@ -7,8 +7,9 @@ The application allows to register for fuel and retrieve information about all t
 * [JAVA 8] - Language
 * [SpringBoot],[JUNIT],[Mockito]- Frameworks
 * [Maven] - Build Tool
+* [Embedded database] -H2
 
-**Import and build the maven project in intellij/eclipse **
+**Import and build the maven project in intellij/eclipse**
 ```
 1.mvn clean install -x
 2. mvn spring-boot:run
@@ -46,9 +47,9 @@ and its prices.
 ```POST Request: http://localhost:8080/fuel/type/add```
 
 Below are the error messages if there invalid price and type of fuel.
-```"message": "Fuel Types not found B00 Please add corresponding valid types [A, B, C,D]"
 ```
-```
+"message": "Fuel Types not found B00 Please add corresponding valid types [A, B, C,D]"
+
 "message": "The valid price of fuel typeBis :20.0",
 ```
 **2. FuelConsumption data retrieval :**
@@ -56,8 +57,8 @@ Below are the error messages if there invalid price and type of fuel.
 2.list fuel consumption records for specified month (each row should contain: fuel type, volume, date, price, total price, driver ID) 
 3.statistics for each month, list fuel consumption records grouped by fuel type (each row should contain: fuel type, volume, average price, total price)
 4.The API will throw record not found exception if id doesn’t exist.
- a.For a driver : GET request: http://localhost:8080/fuel/get/amount/{id} 
- b.For all drivers :GET request: http://localhost:8080/fuel/get/amount
+ a.For a driver : ```GET request: http://localhost:8080/fuel/get/amount/{id} ```
+ b.For all drivers :```GET request: http://localhost:8080/fuel/get/amount```
 ```
 Sample Response:
 
@@ -116,7 +117,7 @@ Sample Response:
 **4.Delete records for a driver:**
     DELETE request : http://localhost:8080/fuel/delete/{id}
 
-##Unit Test cases 
+## Unit Test cases 
 1. The unit test coverage is 100 % for all the the methods in FuelService.class  which includes below:
    a.Get,Add and update details for a driver and all drivers
    b.Testing invalid inputs and exception
