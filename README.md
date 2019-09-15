@@ -8,10 +8,11 @@ The application allows to register for fuel and retrieve information about all t
 * [SpringBoot],[JUNIT],[Mockito]- Frameworks
 * [Maven] - Build Tool
 
-Import and build the maven project.
+**Import and build the maven project**
 Run Demo.class and wait for the server to be started
 Once the server is up , you can test the API's using client like POSTMAN.
 By default server starts at port 8080 but if it is busy then server configuration can be added in application.properties.
+
 server.port=8081
 
 ### Prerequisites
