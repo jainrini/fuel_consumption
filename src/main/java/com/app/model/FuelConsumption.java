@@ -1,6 +1,7 @@
 package com.app.model;
 
 
+import com.app.customvalidator.ValidPrice;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
@@ -20,7 +21,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-@Valid
 public class FuelConsumption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,6 +38,7 @@ public class FuelConsumption {
 
     @Column(name = "price")
     @NotNull
+    @ValidPrice
     private Double price;
 
     @Column(name = "volume")

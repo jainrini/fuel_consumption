@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/customexception/InValidPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/customvalidator/InValidPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/customvalidator/ValidPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelConsumption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/model/FuelType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption$FuelConsumptionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption$FuelConsumptionBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -317,14 +307,39 @@
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="102" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/customvalidator/InValidPrice.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/customvalidator/InValidPrice.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="107" />
+          <line>51</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
