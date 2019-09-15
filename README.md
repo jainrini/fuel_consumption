@@ -53,14 +53,20 @@ Below are the error messages if there invalid price and type of fuel.
 "message": "The valid price of fuel typeBis :20.0",
 ```
 **2. FuelConsumption data retrieval :**
-1.get details for all
-2.total spent amount of money grouped by month
-3.list fuel consumption records for specified month (each row should contain: fuel type, volume, date, price, total price, driver ID) 
-4.statistics for each month, list fuel consumption records grouped by fuel type (each row should contain: fuel type, volume, average price, total price)
-5.The API will throw record not found exception if id doesn’t exist.
+1.get details for all--
+
+2.total spent amount of money grouped by month--
+
+3.list fuel consumption records for specified month (each row should contain: fuel type, volume, date, price, total price, driver ID)--
+
+4.statistics for each month, list fuel consumption records grouped by fuel type (each row should contain: fuel type, volume, average price, total price)--
+
+5.The API will throw record not found exception if id doesn’t exist.--
+
  a.For all details :```GET request http://localhost:8080/fuel/consumption/all ```
  b.For a driver : ```GET request: http://localhost:8080/fuel/get/amount/{id} ```
  c.For all drivers :```GET request: http://localhost:8080/fuel/get/amount```
+ 
 ```
 Sample Response:
 
