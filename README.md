@@ -45,10 +45,10 @@ PUT Request : http://localhost:8080/fuel/type/update
 POST Request: http://localhost:8080/fuel/type/add
 
 Below are the error messages if there invalid price and type of fuel.
-```"message": "Fuel Types not found B00 Please add corresponding valid types [A, B, C,
-D]"
+```"message": "Fuel Types not found B00 Please add corresponding valid types [A, B, C,D]"
+```
+```
 "message": "The valid price of fuel typeBis :20.0",
-
 ```
 **2. FuelConsumption data retrieval :**
 1.total spent amount of money grouped by month
