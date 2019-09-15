@@ -91,7 +91,7 @@ public class FuelService {
             return monthFuelConsumedHashMap;
         }
         else{
-            throw new RecordNotFound(" The record or driver Id "+ id+ "does not exist");
+            throw new RecordNotFound(" The record or driver Id "+ id + " does not exist");
         }
     }
 

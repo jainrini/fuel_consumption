@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="" />
+    <list default="true" id="8c6726e8-d084-4df1-b69e-8cc037d401d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/FuelConsumption.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/controller/FuelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/customexception/FuelTypeNotFound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/customexception/InValidPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/customexception/RecordNotFound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/customvalidator/InValidPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/customvalidator/ValidPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumed$FuelConsumedBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption$FuelConsumptionBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelConsumption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelStatics$FuelStaticsBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelStatics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType$FuelTypeBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/model/FuelType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/repository/FuelConsumptionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/repository/FuelTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/service/FuelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/FuelConsumptionTest.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FuelConsumptionTest">
+  <component name="RunManager" selected="Application.Demo">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.Demo" />
       <module name="FuelConsumption" />
@@ -174,22 +202,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuelConsumptionTest.getFuelTypeDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FuelConsumption" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.FuelConsumptionTest" />
-      <option name="METHOD_NAME" value="getFuelTypeDetails" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FuelConsumptionTest.testRecordNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FuelConsumption" />
       <extension name="coverage">
@@ -209,18 +221,18 @@
     <list>
       <item itemvalue="JUnit.FuelConsumptionTest.addInvalidType" />
       <item itemvalue="JUnit.FuelConsumptionTest" />
-      <item itemvalue="JUnit.FuelConsumptionTest.getFuelTypeDetails" />
       <item itemvalue="JUnit.FuelConsumptionTest.addFuelType" />
       <item itemvalue="JUnit.FuelConsumptionTest.deleteById" />
       <item itemvalue="JUnit.FuelConsumptionTest.testRecordNotFound" />
+      <item itemvalue="Application.Demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo" />
         <item itemvalue="JUnit.FuelConsumptionTest" />
         <item itemvalue="JUnit.FuelConsumptionTest.deleteById" />
         <item itemvalue="JUnit.FuelConsumptionTest.testRecordNotFound" />
         <item itemvalue="JUnit.FuelConsumptionTest.addFuelType" />
-        <item itemvalue="JUnit.FuelConsumptionTest.getFuelTypeDetails" />
       </list>
     </recent_temporary>
   </component>
@@ -252,44 +264,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>170</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>171</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>165</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/controller/FuelController.java</url>
           <line>47</line>
           <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>204</line>
-          <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/app/customvalidator/ValidPriceValidator.java</url>
@@ -322,73 +299,8 @@
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="115" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="120" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>134</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/service/FuelService.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/FuelConsumptionTest.java</url>
-          <line>132</line>
+          <line>116</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>

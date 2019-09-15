@@ -10,8 +10,6 @@ import com.app.model.FuelType;
 import com.app.repository.FuelConsumptionRepository;
 import com.app.repository.FuelTypeRepository;
 import com.app.service.FuelService;
-import com.google.common.collect.ArrayListMultimap;
-import org.assertj.core.util.Sets;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -22,27 +20,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mockito.stubbing.Answer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowCallbackHandler;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import sun.security.ec.point.ProjectivePoint;
 
-import javax.inject.Inject;
-import javax.sql.DataSource;
-import javax.validation.constraints.NotNull;
-import java.sql.ResultSet;
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static org.mockito.ArgumentMatchers.anyString;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FuelConsumptionTest {
