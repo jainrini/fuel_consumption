@@ -8,16 +8,17 @@ The application allows to register for fuel and retrieve information about all t
 * [SpringBoot],[JUNIT],[Mockito]- Frameworks
 * [Maven] - Build Tool
 
-**Import and build the maven project**
-Run Demo.class and wait for the server to be started
+**Import and build the maven project in intellij/eclipse **
+```
+1.mvn clean install -x
+2. mvn spring-boot:run
+ ```  
+Wait for the server to be started
 Once the server is up , you can test the API's using client like POSTMAN.
-By default server starts at port 8080 but if it is busy then server configuration can be added in application.properties.
+By default server starts at port 8080 ,but if it is busy then server configuration can be added in application.properties.
+```server.port=8081```
 
-server.port=8081
-
-### Prerequisites
-
-## Using the API's
+## Use the API's
 
 **To add records for a driver or list of drivers**
 1.POST request: http://localhost:8080/fuel/consumption/add
@@ -38,11 +39,11 @@ interface.
 Any changes required can be done using below API's which allows to add and update FuelType
 and its prices.
 1. Get all existing FuelTypes and corresponding prices:
-GET Request: http://localhost:8080/fuel/type
+```GET Request: http://localhost:8080/fuel/type```
 2. Update existing fuelType :
-PUT Request : http://localhost:8080/fuel/type/update
+```PUT Request : http://localhost:8080/fuel/type/update```
 3. Add fuelType :
-POST Request: http://localhost:8080/fuel/type/add
+```POST Request: http://localhost:8080/fuel/type/add```
 
 Below are the error messages if there invalid price and type of fuel.
 ```"message": "Fuel Types not found B00 Please add corresponding valid types [A, B, C,D]"
@@ -102,7 +103,21 @@ Sample Response:
 }
 ```
 **3. Update Records for drivers:**
-        PUT request : http://localhost:8080/fuel/update/details
+ PUT request : http://localhost:8080/fuel/update/detail
+ 
+```Payload: [{"driverid": 1,
+"fueltype": "A",
+"price": 10,
+"volume": 20,
+"date": "2019-08-11"
+}]
+```
 
 **4.Delete records for a driver:**
     DELETE request : http://localhost:8080/fuel/delete/{id}
+
+##Unit Test cases 
+1. The unit test coverage is 100 % for all the the methods in FuelService.class  which includes below:
+   a.Get,Add and update details for a driver and all drivers
+   b.Testing invalid inputs and exception
+   c.Get,Add and update fuel type
