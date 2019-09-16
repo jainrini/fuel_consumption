@@ -59,7 +59,7 @@ Below are the error messages if there invalid price and type of fuel.
 "message": "The valid price of fuel typeBis :20.0",
 ```
 **2. FuelConsumption data retrieval :**
-1.get details for all--
+1.get details for all 
 
 2.total spent amount of money grouped by month
 
